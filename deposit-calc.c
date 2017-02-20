@@ -28,24 +28,24 @@ int Calculation_of_income(int* term, int* amount){
 	}
 	
 	if(*amount > 100000){
-       if(*term <= 30){
-           income = *amount * 0.9;
-       }
-       else if((*term >= 31)  && (*term <= 120)){
-           income = *amount * 1.03;
-       }
-       else if((*term >= 121)  && (*term <= 240)){
-           income = *amount * 1.08;
-       }
-       else if((*term >= 241)  && (*term <= 365)){
-           income = *amount * 1.15;
-       }
+		if(*term <= 30){
+			income = *amount * 0.9;
+		}
+		else if((*term >= 31)  && (*term <= 120)){
+			income = *amount * 1.03;
+		}
+		else if((*term >= 121)  && (*term <= 240)){
+			income = *amount * 1.08;
+		}
+		else if((*term >= 241)  && (*term <= 365)){
+			income = *amount * 1.15;
+		}
 	}
 	
 	return income;
 }
 		
-void main(){
+int main(){
 
 	int term;
 	int amount;
@@ -57,4 +57,6 @@ void main(){
 	
 	Input_Validation(&term, &amount);
 	printf("%d\n", Calculation_of_income(&term, &amount));
+	
+	return 0;
 }
