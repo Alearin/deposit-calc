@@ -1,5 +1,1 @@
-bin/main
-bin/validation
-bin/calculation
-build/scr/*.o
-build/test/*.o
+
