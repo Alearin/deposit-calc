@@ -3,10 +3,10 @@ all: deposit test1 test2
 deposit: build/src/main.o build/src/deposit.o
 	gcc build/src/main.o build/src/deposit.o -o bin/main
 
-build/scr/main.o: src/main.c
+build/src/main.o: src/main.c
 	gcc -Wall -Werror -c src/main.c -o build/src/main.o
 
-build/scr/deposit.o: src/deposit.c
+build/src/deposit.o: src/deposit.c
 	gcc -Wall -Werror -c src/deposit.c -o build/src/deposit.o
 
 test1: build/test/maint.o build/test/calculation.o
