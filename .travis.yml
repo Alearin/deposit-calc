@@ -3,3 +3,4 @@ compiler: gcc
 script:
 - make
 - bin/validation
+- bin/calculation
